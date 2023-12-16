@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO_URL = 'https://github.com/namratasgit/pipeline1.git'
-        NGINX_PATH = 'C:\\Users\\user\\Desktop\\Namrata_Das_PU\\Fall_AY_2023-24\\DevOps\\installers\\nginx-1.24.0\\htmldocs'
+        GIT_REPO_URL = 'https://github.com//Nishalokesh//pipeline.git'
+        NGINX_PATH = 'C:\\Users\\lnish\\Downloads\\nginx-1.24.0\\nginx-1.24.0\\htmldocs'
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Use the checkout step to clone the Git repository
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: GIT_REPO_URL]]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: https://github.com//Nishalokesh//pipeline.git ]]])
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Using the Jenkins workspace variable to reference files
-                    bat 'xcopy /y "C:\\Users\\user\\Desktop\\Namrata_Das_PU\\Fall_AY_2023-24\\Subject_Handled\\DevOps\\pipeline\\index.html" "%NGINX_PATH%"'
+                    bat 'xcopy /y "file:///C://Users//lnish//Downloads//nginx-1.24.0//nginx-1.24.0//html//index.html" "%NGINX_PATH%"'
                 }
             }
         }
