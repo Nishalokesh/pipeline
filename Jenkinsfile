@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Using the Jenkins workspace variable to reference files
-                    bat 'xcopy /y "file:///C://Users//lnish//Downloads//nginx-1.24.0//nginx-1.24.0//html//index.html" "%NGINX_PATH%"'
+                    bat 'xcopy /y "file:///C:/Users/lnish/OneDrive/Desktop/jenkins_pipeline/pipeline.html" "%NGINX_PATH%"'
                 }
             }
         }
